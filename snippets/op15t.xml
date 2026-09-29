@@ -14,6 +14,17 @@
           sync-c="true"
           sync-j="4" />
 
+  <!-- Use the OnePlus vendor HALs, like PixelOS, instead of CAF SM8850 HAL sources. -->
+  <remove-project path="hardware/qcom-caf/sm8850/audio/agm" />
+  <remove-project path="hardware/qcom-caf/sm8850/audio/graphservices" />
+  <remove-project path="hardware/qcom-caf/sm8850/audio/pal" />
+  <remove-project path="hardware/qcom-caf/sm8850/audio/primary-hal" />
+  <remove-project path="hardware/qcom-caf/sm8850/data-ipa-cfg-mgr" />
+  <remove-project path="hardware/qcom-caf/sm8850/dataipa" />
+  <remove-project path="hardware/qcom-caf/sm8850/display/core" />
+  <remove-project path="hardware/qcom-caf/sm8850/display/hal" />
+  <remove-project path="hardware/qcom-caf/sm8850/display/intf" />
+
   <extend-project path="build/soong" name="build_soong"
                   remote="op15t-evo" revision="cnb" />
   <extend-project path="frameworks/base" name="frameworks_base"
