@@ -1060,4 +1060,5 @@
 
   <include name="snippets/evolution.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/op15t.xml" />
 </manifest>
