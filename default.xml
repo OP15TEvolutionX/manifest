@@ -1060,5 +1060,6 @@
 
   <include name="snippets/evolution.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/kernel-6.12.xml" />
   <include name="snippets/op15t.xml" />
 </manifest>

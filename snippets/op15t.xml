@@ -14,21 +14,10 @@
           sync-c="true"
           sync-j="4" />
 
-  <!-- Use the OnePlus vendor HALs, like PixelOS, instead of CAF SM8850 HAL sources. -->
-  <remove-project path="hardware/qcom-caf/sm8850/audio/agm" />
-  <remove-project path="hardware/qcom-caf/sm8850/audio/graphservices" />
-  <remove-project path="hardware/qcom-caf/sm8850/audio/pal" />
-  <remove-project path="hardware/qcom-caf/sm8850/audio/primary-hal" />
-  <remove-project path="hardware/qcom-caf/sm8850/data-ipa-cfg-mgr" />
-  <remove-project path="hardware/qcom-caf/sm8850/dataipa" />
-  <remove-project path="hardware/qcom-caf/sm8850/display/core" />
-  <remove-project path="hardware/qcom-caf/sm8850/display/hal" />
-  <remove-project path="hardware/qcom-caf/sm8850/display/intf" />
-
   <extend-project path="build/soong" name="build_soong"
                   remote="op15t-evo" revision="cnb" />
   <extend-project path="frameworks/base" name="frameworks_base"
-                  remote="op15t-evo" revision="cnb" />
+                  remote="op15t-evo" revision="EvolutionX-17" />
   <extend-project path="packages/apps/Settings" name="packages_apps_Settings"
                   remote="op15t-evo" revision="cnb" />
   <extend-project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth"
@@ -46,17 +35,12 @@
   <project path="device/oneplus/fairlady"
            name="android_device_oneplus_fairlady"
            remote="op15t-devices"
-           revision="cnb"
+           revision="lineage-24.0-staging"
            groups="local::fairlady" />
   <project path="device/oneplus/sm8850-common"
            name="android_device_oneplus_sm8850-common"
            remote="op15t-devices"
-           revision="lineage-24.0"
-           groups="local::fairlady" />
-  <project path="device/oneplus/fairlady-kernel"
-           name="android_device_oneplus_fairlady-kernel"
-           remote="op15t-devices"
-           revision="lineage-24.0"
+           revision="lineage-24.0-staging"
            groups="local::fairlady" />
   <project path="vendor/oneplus/fairlady"
            name="proprietary_vendor_oneplus_fairlady"
@@ -66,11 +50,25 @@
   <project path="vendor/oneplus/sm8850-common"
            name="proprietary_vendor_oneplus_sm8850-common"
            remote="op15t-devices"
-           revision="lineage-24.0"
+           revision="lineage-24.0-staging"
            groups="local::fairlady" />
   <project path="hardware/oplus"
            name="android_hardware_oplus"
            remote="op15t-devices"
+           revision="lineage-24.0"
+           groups="local::fairlady" />
+
+  <!-- Kernel dependencies declared by android_device_oneplus_sm8850-common. -->
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850"
+           name="LineageOS/android_kernel_oneplus_sm8850"
+           revision="lineage-24.0"
+           groups="local::fairlady" />
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees"
+           name="LineageOS/android_kernel_oneplus_sm8850-devicetrees"
+           revision="lineage-24.0"
+           groups="local::fairlady" />
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"
+           name="LineageOS/android_kernel_oneplus_sm8850-modules"
            revision="lineage-24.0"
            groups="local::fairlady" />
 
