@@ -28,6 +28,9 @@
                   remote="op15t-evo" revision="cnb" />
   <extend-project path="vendor/extras" name="vendor_extras"
                   remote="op15t-evo" revision="cnb" />
+  <extend-project path="vendor/google/apps/SettingsGoogle"
+                  name="vendor_google_apps_SettingsGoogle"
+                  remote="op15t-evo" revision="op15t-cnb" />
   <extend-project path="vendor/lineage" name="vendor_evolution"
                   remote="op15t-evo" revision="cnb" />
   <extend-project path="vendor/pixel-style" name="vendor_pixel-style"
