@@ -43,6 +43,14 @@
            remote="op15t-evo"
            revision="lineage-24.0" />
 
+  <!-- Keep the fairlady LOW_POWER and DEVICE_IDLE support across repo sync. -->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_power" />
+  <project path="vendor/qcom/opensource/power"
+           name="android_vendor_qcom_opensource_power"
+           remote="op15t-evo"
+           revision="lineage-24.0"
+           groups="qcom,kaanapali-vendor" />
+
   <!-- Routines sources compile inside SystemUI and Settings. -->
   <project path="packages/features/Routines"
            name="android_packages_features_Routines"
