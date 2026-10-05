@@ -26,8 +26,11 @@
                   remote="op15t-evo" revision="cnb" />
   <extend-project path="system/sepolicy" name="system_sepolicy"
                   remote="op15t-evo" revision="cnb" />
-  <extend-project path="vendor/extras" name="vendor_extras"
-                  remote="op15t-evo" revision="cnb" />
+  <remove-project name="vendor_extras" />
+  <project path="vendor/extras" name="vendor_extras"
+           remote="op15t-evo" revision="cnb">
+    <linkfile src="tools/build_fairlady.sh" dest="run_build.sh" />
+  </project>
   <extend-project path="vendor/google/apps/SettingsGoogle"
                   name="vendor_google_apps_SettingsGoogle"
                   remote="op15t-evo" revision="cnb" />
