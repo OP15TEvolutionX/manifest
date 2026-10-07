@@ -679,6 +679,7 @@
   <project path="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" name="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" name="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="kernel/tests" name="kernel/tests" groups="vts,pdk" remote="aosp" />
+  <project path="libcore" name="platform/libcore" groups="pdk,sysui-studio" remote="aosp" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" remote="aosp" />
   <project path="packages/apps/AvatarPicker" name="platform/packages/apps/AvatarPicker" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
@@ -761,7 +762,6 @@
   <project path="packages/modules/ArtPrebuilt" name="platform/packages/modules/ArtPrebuilt" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="packages/modules/CaptivePortalLogin" name="platform/packages/modules/CaptivePortalLogin" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/modules/CellBroadcastService" name="platform/packages/modules/CellBroadcastService" groups="pdk" remote="aosp" />
-  <project path="packages/modules/common" name="platform/packages/modules/common" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/modules/ConfigInfrastructure" name="platform/packages/modules/ConfigInfrastructure" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/modules/CrashRecovery" name="platform/packages/modules/CrashRecovery" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/modules/DeviceLock" name="platform/packages/modules/DeviceLock" groups="pdk-cw-fs,pdk-fs" remote="aosp" />

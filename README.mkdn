@@ -1,4 +1,4 @@
-![Evolution X](https://github.com/Evolution-X/manifest/raw/cnb/Banner.png)
+![Evolution X](https://github.com/Evolution-X/.github/raw/refs/heads/main/profile/Banner.svg)
 
 # Initialize local repository
 ```

@@ -83,9 +83,6 @@
   <!-- Kernel -->
   <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="evo" />
 
-  <!-- Libcore -->
-  <project path="libcore" name="libcore" groups="pdk,sysui-studio" remote="evo" />
-
   <!-- LineageOS additions -->
   <project path="lineage-sdk" name="lineage-sdk" remote="evo" />
 
@@ -104,13 +101,15 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="evo" />
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="evo" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="evo" />
-  <project path="packages/apps/ThemeStore" name="packages_apps_ThemeStore" remote="evo" revision="cnb" />
+  <project path="packages/apps/SystemUIClocks" name="packages_apps_SystemUIClocks" remote="evo" />
+  <project path="packages/apps/ThemeStore" name="packages_apps_ThemeStore" remote="evo" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="evo" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="evo" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="evo" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="evo" />
   <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="evo" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="evo" />
+  <project path="packages/modules/common" name="packages_modules_common" groups="pdk-cw-fs,pdk-fs" remote="evo" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="evo" />  
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="evo" />
   <project path="packages/resources/apps" name="packages_resources_apps" remote="evo" />
@@ -137,11 +136,10 @@
   <!-- Vendor -->
   <project path="vendor/extras" name="vendor_extras" remote="evo" />
   <project path="vendor/google/apps/SettingsGoogle" name="vendor_google_apps_SettingsGoogle" remote="evo" />
-  <project path="vendor/google/apps/SystemUIGoogle" name="vendor_google_apps_SystemUIGoogle" remote="evo" />
-  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="evo" />
+  <project path="vendor/unbundled_google/packages/SystemUIGoogle" name="vendor_packages_SystemUIGoogle" remote="evo" />
   <project path="vendor/gms" name="vendor_gms" remote="evo" clone-depth="1" />
   <project path="vendor/gms-mosey" name="vendor_gms-mosey" remote="evo" />
   <project path="vendor/lineage" name="vendor_evolution" remote="evo" />
   <project path="vendor/pixel-style" name="vendor_pixel-style" remote="evo" />
-  <!--<project path="vendor/themes" name="vendor_themes" remote="evo" />-->
+  <project path="vendor/themes" name="vendor_themes" remote="evo" />
 </manifest>
