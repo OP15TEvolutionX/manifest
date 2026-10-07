@@ -44,13 +44,6 @@
   <extend-project path="vendor/pixel-style" name="vendor_pixel-style"
                   remote="op15t-evo" revision="evo17" />
 
-  <!-- Preserve the local NFC client queue lifetime fix. -->
-  <remove-project name="LineageOS/android_hardware_nxp_nfc" />
-  <project path="hardware/nxp/nfc"
-           name="android_hardware_nxp_nfc"
-           remote="op15t-evo"
-           revision="lineage-24.0-evo17" />
-
   <!-- Keep the fairlady LOW_POWER and DEVICE_IDLE support across repo sync. -->
   <remove-project name="LineageOS/android_vendor_qcom_opensource_power" />
   <project path="vendor/qcom/opensource/power"
