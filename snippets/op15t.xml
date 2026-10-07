@@ -26,6 +26,9 @@
                   remote="evo" revision="cnb" />
   <extend-project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth"
                   remote="op15t-evo" revision="evo17" />
+  <!-- Native event-based Quick Share Wi-Fi recovery. -->
+  <extend-project path="packages/modules/Wifi" name="packages_modules_Wifi"
+                  remote="op15t-evo" revision="evo17" />
   <extend-project path="system/sepolicy" name="system_sepolicy"
                   remote="op15t-evo" revision="evo17" />
   <remove-project name="vendor_extras" />
@@ -110,8 +113,9 @@
 
   <!-- Kernel dependencies declared by android_device_oneplus_sm8850-common. -->
   <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850"
-           name="LineageOS/android_kernel_oneplus_sm8850"
-           revision="lineage-24.0"
+           name="android_kernel_oneplus_sm8850"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
            groups="local::fairlady" />
   <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees"
            name="android_kernel_oneplus_sm8850-devicetrees"
@@ -119,8 +123,9 @@
            revision="lineage-24.0-op15t"
            groups="local::fairlady" />
   <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"
-           name="LineageOS/android_kernel_oneplus_sm8850-modules"
-           revision="lineage-24.0"
+           name="android_kernel_oneplus_sm8850-modules"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
            groups="local::fairlady" />
 
 </manifest>
