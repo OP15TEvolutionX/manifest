@@ -18,6 +18,9 @@
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="frameworks/base" name="frameworks_base"
                   remote="op15t-evo" revision="evo17" />
+  <!-- Temporary installer rollback; see vendor/gms/TEMPORARY_PACKAGE_INSTALLER.md. -->
+  <extend-project path="vendor/gms" name="vendor_gms"
+                  remote="op15t-evo" revision="evo17-installer-rollback" />
   <extend-project path="frameworks/libs/systemui" name="frameworks_libs_systemui"
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="packages/apps/Settings" name="packages_apps_Settings"
