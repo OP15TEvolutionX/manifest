@@ -127,7 +127,6 @@
   <project path="system/fs/fs_mgr" name="system_fs_fs_mgr" groups="pdk" remote="evo" />
   <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="evo" />
   <project path="system/media" name="system_media" groups="pdk" remote="evo" />
-  <project path="system/memory/libdmabufheap" name="system_memory_libdmabufheap" groups="pdk" remote="evo" />
   <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="evo" />
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="evo" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="evo" />
@@ -135,11 +134,11 @@
 
   <!-- Vendor -->
   <project path="vendor/extras" name="vendor_extras" remote="evo" />
-  <project path="vendor/google/apps/SettingsGoogle" name="vendor_google_apps_SettingsGoogle" remote="evo" />
-  <project path="vendor/unbundled_google/packages/SystemUIGoogle" name="vendor_packages_SystemUIGoogle" remote="evo" />
   <project path="vendor/gms" name="vendor_gms" remote="evo" clone-depth="1" />
   <project path="vendor/gms-mosey" name="vendor_gms-mosey" remote="evo" />
   <project path="vendor/lineage" name="vendor_evolution" remote="evo" />
   <project path="vendor/pixel-style" name="vendor_pixel-style" remote="evo" />
   <project path="vendor/themes" name="vendor_themes" remote="evo" />
+  <project path="vendor/google/apps/SettingsGoogle" name="vendor_google_apps_SettingsGoogle" remote="evo" />
+  <project path="vendor/unbundled_google/packages/SystemUIGoogle" name="vendor_packages_SystemUIGoogle" remote="evo" />
 </manifest>
