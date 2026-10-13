@@ -14,6 +14,10 @@
           sync-c="true"
           sync-j="4" />
 
+  <!-- Preserve OTA ZIP signature verification in our recovery fork. -->
+  <extend-project path="bootable/recovery" name="bootable_recovery"
+                  remote="op15t-evo" revision="evo17" />
+
   <extend-project path="build/soong" name="build_soong"
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="frameworks/base" name="frameworks_base"
