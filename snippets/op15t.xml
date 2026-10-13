@@ -42,6 +42,9 @@
   <extend-project path="vendor/google/apps/SettingsGoogle"
                   name="vendor_google_apps_SettingsGoogle"
                   remote="op15t-evo" revision="evo17" />
+  <extend-project path="vendor/unbundled_google/packages/SystemUIGoogle"
+                  name="vendor_packages_SystemUIGoogle"
+                  remote="op15t-evo" revision="evo17" />
   <extend-project path="vendor/lineage" name="vendor_evolution"
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="vendor/pixel-style" name="vendor_pixel-style"
@@ -78,6 +81,15 @@
            remote="op15t-evo"
            revision="cnb">
     <linkfile src="settings/res" dest="packages/apps/Settings/kernel-manager-res" />
+  </project>
+
+  <!-- Clipp sources compile inside SystemUI and Settings. -->
+  <project path="packages/features/Clipp"
+           name="android_packages_features_Clipp"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/clipp-res" />
+    <linkfile src="systemui/res" dest="frameworks/base/packages/SystemUI/clipp-res" />
   </project>
 
   <!-- Device and proprietary trees. -->
