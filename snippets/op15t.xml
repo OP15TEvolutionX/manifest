@@ -14,6 +14,12 @@
           sync-c="true"
           sync-j="4" />
 
+  <!-- Allow system_server to proxy Mosey's stable Binder service. -->
+  <remote name="op15t-sepolicy"
+          fetch="https://github.com/OP15TEvolutionX"
+          sync-c="true"
+          sync-j="4" />
+
   <!-- Preserve OTA ZIP signature verification in our recovery fork. -->
   <extend-project path="bootable/recovery" name="bootable_recovery"
                   remote="op15t-evo" revision="evo17" />
@@ -38,6 +44,8 @@
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="system/sepolicy" name="system_sepolicy"
                   remote="op15t-evo" revision="evo17" />
+  <extend-project path="device/lineage/sepolicy" name="device_evolution_sepolicy"
+                  remote="op15t-sepolicy" revision="evo17" />
   <remove-project name="vendor_extras" />
   <project path="vendor/extras" name="vendor_extras"
            remote="op15t-evo" revision="evo17">
