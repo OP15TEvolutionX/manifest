@@ -28,6 +28,8 @@
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="frameworks/base" name="frameworks_base"
                   remote="op15t-evo" revision="evo17" />
+  <extend-project path="frameworks/native" name="frameworks_native"
+                  remote="op15t-evo" revision="evo17" />
   <!-- GMS fork before the optional Mosey platform library restoration. -->
   <extend-project path="vendor/gms" name="vendor_gms"
                   remote="op15t-evo" revision="evo17" />
