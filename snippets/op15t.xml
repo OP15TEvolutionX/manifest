@@ -30,6 +30,8 @@
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="frameworks/native" name="frameworks_native"
                   remote="op15t-evo" revision="evo17" />
+  <extend-project path="frameworks/av" name="frameworks_av"
+                  remote="op15t-evo" revision="evo17" />
   <!-- GMS fork before the optional Mosey platform library restoration. -->
   <extend-project path="vendor/gms" name="vendor_gms"
                   remote="op15t-evo" revision="evo17" />
@@ -165,5 +167,27 @@
            remote="op15t-devices"
            revision="lineage-24.0-op15t"
            groups="local::fairlady" />
+
+
+  <!-- OnePlus camera port (OplusCamera 16.0.10.500) for fairlady. -->
+  <project path="vendor/oneplus/camera-sm8850-common"
+           name="vendor_oneplus_camera-sm8850-common"
+           remote="op15t-evo"
+           revision="camera-port-evo17"
+           groups="local::fairlady" />
+  <project path="proprietary/vendor/oneplus/camera-sm8850-common"
+           name="proprietary-vendor-oneplus-camera-sm8850-common"
+           remote="op15t-evo"
+           revision="camera-port-evo17"
+           groups="local::fairlady" />
+
+
+  <!-- Vendor sepolicy: let the Oplus camera app reach the offline camera service. -->
+  <remove-project path="device/qcom/sepolicy_vndr/sm8850" />
+  <project path="device/qcom/sepolicy_vndr/sm8850"
+           name="android_device_qcom_sepolicy_vndr"
+           remote="op15t-evo"
+           revision="evo17"
+           groups="qcom,kaanapali-vendor" />
 
 </manifest>
