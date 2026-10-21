@@ -135,7 +135,7 @@
   <project path="device/oneplus/fairlady"
            name="android_device_oneplus_fairlady"
            remote="op15t-devices"
-           revision="evo17"
+           revision="lineage-24.0-OSS"
            groups="local::fairlady" />
   <project path="device/oneplus/sm8850-common"
            name="android_device_oneplus_sm8850-common"
