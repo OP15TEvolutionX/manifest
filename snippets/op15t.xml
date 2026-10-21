@@ -50,6 +50,10 @@
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="device/lineage/sepolicy" name="device_evolution_sepolicy"
                   remote="op15t-sepolicy" revision="evo17" />
+  <!-- Lineage health HAL with oplus PLC bypass charging. -->
+  <remove-project name="LineageOS/android_hardware_lineage_interfaces" />
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces"
+           remote="op15t-evo" revision="evo17" />
   <remove-project name="vendor_extras" />
   <project path="vendor/extras" name="vendor_extras"
            remote="op15t-evo" revision="evo17">
