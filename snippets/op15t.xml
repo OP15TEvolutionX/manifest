@@ -39,6 +39,9 @@
                   remote="op15t-evo" revision="evo17" />
   <extend-project path="packages/apps/Settings" name="packages_apps_Settings"
                   remote="op15t-evo" revision="evo17" />
+  <!-- Keep PSK for WPA2/WPA3 transition networks so Setup Wizard connects. -->
+  <extend-project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi"
+                  remote="op15t-evo" revision="evo17" />
   <extend-project path="packages/apps/Evolver" name="packages_apps_Evolver"
                   remote="evo" revision="cnb" />
   <extend-project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth"
