@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Evolution X forks maintained by OP15TEvolutionX. -->
+  <remote name="op15t-evo"
+          fetch="https://github.com/OP15TEvolutionX"
+          revision="refs/heads/cnb"
+          sync-c="true"
+          sync-j="4" />
+
+  <!-- Shared OnePlus device trees remain in the device organization. -->
+  <remote name="op15t-devices"
+          fetch="https://github.com/OP15T-SM8850-Development"
+          sync-c="true"
+          sync-j="4" />
+
+  <!-- Allow system_server to proxy Mosey's stable Binder service. -->
+  <remote name="op15t-sepolicy"
+          fetch="https://github.com/OP15TEvolutionX"
+          sync-c="true"
+          sync-j="4" />
+
+  <!-- Preserve OTA ZIP signature verification in our recovery fork. -->
+  <extend-project path="bootable/recovery" name="bootable_recovery"
+                  remote="op15t-evo" revision="evo17" />
+
+  <extend-project path="frameworks/base" name="frameworks_base"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="frameworks/native" name="frameworks_native"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="frameworks/av" name="frameworks_av"
+                  remote="op15t-evo" revision="evo17" />
+  <!-- GMS fork with Mosey Wi-Fi permissions and the optional Mosey platform library. -->
+  <extend-project path="vendor/gms" name="vendor_gms"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="frameworks/libs/systemui" name="frameworks_libs_systemui"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="packages/apps/Settings" name="packages_apps_Settings"
+                  remote="op15t-evo" revision="evo17" />
+  <remove-project name="LineageOS/android_packages_apps_SettingsIntelligence" />
+  <project path="packages/apps/SettingsIntelligence"
+           name="android_packages_apps_SettingsIntelligence"
+           remote="op15t-evo" revision="evo17" groups="pdk-fs" />
+  <!-- Keep PSK for WPA2/WPA3 transition networks so Setup Wizard connects. -->
+  <extend-project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="packages/apps/Evolver" name="packages_apps_Evolver"
+                  remote="evo" revision="cnb" />
+  <extend-project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="system/sepolicy" name="system_sepolicy"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="device/lineage/sepolicy" name="device_evolution_sepolicy"
+                  remote="op15t-sepolicy" revision="evo17" />
+  <!-- Lineage health HAL with oplus PLC bypass charging. -->
+  <remove-project name="LineageOS/android_hardware_lineage_interfaces" />
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces"
+           remote="op15t-evo" revision="evo17" />
+  <remove-project name="vendor_extras" />
+  <project path="vendor/extras" name="vendor_extras"
+           remote="op15t-evo" revision="evo17">
+    <linkfile src="tools/build_fairlady.sh" dest="run_build.sh" />
+  </project>
+  <extend-project path="vendor/unbundled_google/packages/SettingsGoogle"
+                  name="vendor_packages_SettingsGoogle"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="vendor/unbundled_google/packages/SystemUIGoogle"
+                  name="vendor_packages_SystemUIGoogle"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="vendor/lineage" name="vendor_evolution"
+                  remote="op15t-evo" revision="evo17" />
+  <extend-project path="vendor/pixel-style" name="vendor_pixel-style"
+                  remote="op15t-evo" revision="evo17" />
+
+  <!-- Keep the fairlady LOW_POWER and DEVICE_IDLE support across repo sync. -->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_power" />
+  <project path="vendor/qcom/opensource/power"
+           name="android_vendor_qcom_opensource_power"
+           remote="op15t-evo"
+           revision="lineage-24.0-evo17"
+           groups="qcom,kaanapali-vendor" />
+
+  <!-- Routines sources compile inside SystemUI and Settings. -->
+  <project path="packages/features/Routines"
+           name="android_packages_features_Routines"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="systemui/res" dest="frameworks/base/packages/SystemUI/routines-res" />
+    <linkfile src="settings/res" dest="packages/apps/Settings/routines-res" />
+  </project>
+
+  <!-- Smartspacer: privileged At a Glance provider, imported as a platform-signed prebuilt. -->
+  <project path="packages/features/Smartspacer"
+           name="android_packages_features_Smartspacer"
+           remote="op15t-evo"
+           revision="cnb" />
+
+  <!-- Clipboard access controls compile inside Settings. -->
+  <project path="packages/features/ClipboardAccess"
+           name="android_packages_features_ClipboardAccess"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/clipboard-access-res" />
+  </project>
+
+  <!-- Sensor block controls compile inside Settings. -->
+  <project path="packages/features/SensorBlock"
+           name="android_packages_features_SensorBlock"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/sensor-block-res" />
+  </project>
+
+  <!-- Idle Manager sources compile inside SystemUI and Settings. -->
+  <project path="packages/features/IdleManager"
+           name="android_packages_features_IdleManager"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/idle-manager-res" />
+  </project>
+
+  <!-- Kernel Manager sources compile inside framework, services and Settings. -->
+  <project path="packages/features/KernelManager"
+           name="android_packages_features_KernelManager"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/kernel-manager-res" />
+  </project>
+
+  <!-- Clipp sources compile inside SystemUI and Settings. -->
+  <project path="packages/features/Clipp"
+           name="android_packages_features_Clipp"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/clipp-res" />
+    <linkfile src="systemui/res" dest="frameworks/base/packages/SystemUI/clipp-res" />
+  </project>
+
+  <!-- Quick Share channel service for Mosey AirDrop compiles inside services. -->
+  <project path="packages/features/QuickShare"
+           name="android_packages_features_QuickShare"
+           remote="op15t-evo"
+           revision="cnb" />
+
+  <!-- Device and proprietary trees. -->
+  <project path="device/oneplus/fairlady"
+           name="android_device_oneplus_fairlady"
+           remote="op15t-devices"
+           revision="lineage-24.0-OSS"
+           groups="local::fairlady" />
+  <project path="device/oneplus/sm8850-common"
+           name="android_device_oneplus_sm8850-common"
+           remote="op15t-devices"
+           revision="lineage-24.0-OSS"
+           groups="local::fairlady" />
+  <project path="vendor/oneplus/fairlady"
+           name="proprietary_vendor_oneplus_fairlady"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
+           groups="local::fairlady" />
+  <project path="vendor/oneplus/sm8850-common"
+           name="proprietary_vendor_oneplus_sm8850-common"
+           remote="op15t-devices"
+           revision="lineage-24.0-OSS"
+           groups="local::fairlady" />
+  <project path="hardware/oplus"
+           name="android_hardware_oplus"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
+           groups="local::fairlady" />
+
+  <!-- Kernel dependencies declared by android_device_oneplus_sm8850-common. -->
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850"
+           name="android_kernel_oneplus_sm8850"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
+           groups="local::fairlady" />
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees"
+           name="android_kernel_oneplus_sm8850-devicetrees"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
+           groups="local::fairlady" />
+  <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"
+           name="android_kernel_oneplus_sm8850-modules"
+           remote="op15t-devices"
+           revision="lineage-24.0-op15t"
+           groups="local::fairlady" />
+
+
+  <!-- OnePlus camera (OplusCamera 16.0.10.500) for fairlady. -->
+  <project path="packages/features/OplusCamera"
+           name="android_packages_features_OplusCamera"
+           remote="op15t-evo"
+           revision="cnb"
+           groups="local::fairlady" />
+
+</manifest>
