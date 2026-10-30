@@ -119,6 +119,14 @@
     <linkfile src="settings/res" dest="packages/apps/Settings/sensor-block-res" />
   </project>
 
+  <!-- Hide app list controls compile inside Settings. -->
+  <project path="packages/features/HideApps"
+           name="android_packages_features_HideApps"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/hide-apps-res" />
+  </project>
+
   <!-- Component manager controls compile inside Settings. -->
   <project path="packages/features/ComponentManager"
            name="android_packages_features_ComponentManager"
