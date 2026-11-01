@@ -76,6 +76,12 @@
            revision="lineage-24.0-evo17"
            groups="qcom,kaanapali-vendor" />
 
+  <!-- Extra features screen compiles inside Settings. -->
+  <project path="packages/apps/ExtraFeatures"
+           name="packages_apps_ExtraFeatures"
+           remote="op15t-evo"
+           revision="main" />
+
   <!-- Routines sources compile inside SystemUI and Settings. -->
   <project path="packages/features/Routines"
            name="android_packages_features_Routines"
