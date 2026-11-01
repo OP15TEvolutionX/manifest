@@ -188,9 +188,9 @@
            revision="lineage-24.0-op15t"
            groups="local::fairlady" />
   <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees"
-           name="android_kernel_oneplus_sm8850-devicetrees"
-           remote="op15t-devices"
-           revision="lineage-24.0-op15t"
+           name="LineageOS/android_kernel_oneplus_sm8850-devicetrees"
+           remote="github"
+           revision="refs/heads/lineage-24.0"
            groups="local::fairlady" />
   <project path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"
            name="android_kernel_oneplus_sm8850-modules"
