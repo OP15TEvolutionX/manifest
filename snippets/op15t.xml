@@ -129,6 +129,14 @@
     <linkfile src="settings/res" dest="packages/apps/Settings/hide-apps-res" />
   </project>
 
+  <!-- Fingerprint protection controls compile inside Settings. -->
+  <project path="packages/features/FingerprintDefender"
+           name="android_packages_features_FingerprintDefender"
+           remote="op15t-evo"
+           revision="cnb">
+    <linkfile src="settings/res" dest="packages/apps/Settings/fingerprint-defender-res" />
+  </project>
+
   <!-- Component manager controls compile inside Settings. -->
   <project path="packages/features/ComponentManager"
            name="android_packages_features_ComponentManager"
