@@ -44,8 +44,6 @@
                   remote="evo" revision="cnb" />
   <extend-project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth"
                   remote="op15t-evo" revision="evo17" />
-  <extend-project path="system/sepolicy" name="system_sepolicy"
-                  remote="op15t-evo" revision="evo17" />
   <extend-project path="device/lineage/sepolicy" name="device_evolution_sepolicy"
                   remote="op15t-sepolicy" revision="evo17" />
   <!-- Lineage health HAL with oplus PLC bypass charging. -->
